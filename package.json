@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^2.13.21",
+    "gatsby-cli": "^2.7.27",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-manifest": "^2.2.3",
     "gatsby-plugin-offline": "^2.2.4",
@@ -17,6 +18,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {

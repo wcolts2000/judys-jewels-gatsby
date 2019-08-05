@@ -4,13 +4,13 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
+// import { connect } from "react-redux"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,7 +29,6 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
           paddingTop: 0,
         }}
       >

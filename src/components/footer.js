@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import UpArrow from "./upArrow"
 
 const Footer = styled.footer`
   background: linear-gradient(to right, hsl(266, 78%, 64%), #00c4cc);
@@ -21,18 +22,21 @@ const Footer = styled.footer`
 
 function footer() {
   return (
-    <Footer>
-      <p>
-        &copy; 2019 | Like Us on Facebook!
-        <a
-          href="https://www.facebook.com/profile.php?id=100008990355830"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <i className="fab fa-facebook-square"></i>
-        </a>
-      </p>
-    </Footer>
+    <>
+      <UpArrow />
+      <Footer>
+        <p>
+          &copy; 2019 | Like Us on Facebook!
+          <a
+            href="https://www.facebook.com/profile.php?id=100008990355830"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i className="fab fa-facebook-square"></i>
+          </a>
+        </p>
+      </Footer>
+    </>
   )
 }
 

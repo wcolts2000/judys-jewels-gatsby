@@ -1,0 +1,528 @@
+.bottom {
+  position: relative;
+}
+
+.bottom:before {
+  content: "";
+  position: absolute;
+  border-width: 30px;
+  border-style: solid;
+  border-color: transparent;
+  left: 50%;
+  bottom: 0;
+  border-top-color: #00c4cc;
+  -webkit-transform: translate(-50%, 100%);
+  -ms-transform: translate(-50%, 100%);
+  transform: translate(-50%, 100%);
+}
+
+a {
+  white-space: nowrap;
+}
+
+.content {
+  padding: 16px 0;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 260px;
+}
+
+.rightHome h1 {
+  font-family: "Alex Brush", cursive;
+  color: hsl(266, 78%, 64%);
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+nav {
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
+  height: 110px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  transition: 500ms ease-in-out;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  font-family: "Acme", sans-serif;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar a {
+  text-decoration: none;
+  color: gold;
+  padding: 0 20px;
+  font-size: inherit;
+}
+
+.navbar button {
+  text-decoration: none;
+  color: gold;
+  padding: 0 20px;
+  font-size: inherit;
+}
+
+.dropdown a {
+  float: left;
+}
+
+.navbar a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: gold;
+  transition: width 0.4s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+a.active::after {
+  width: 100%;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  border-radius: 6px 6px 0 0;
+}
+
+.dropdown:hover .dropbtn {
+  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
+}
+
+/* Dropdown content (hidden by default) */
+
+.dropdown-content {
+  /* display: none; */
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  position: absolute;
+  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
+  min-width: 200px;
+  border-radius: 0 6px 6px 6px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+  float: none;
+  color: gold;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Add a grey background color to dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: #00c4cc;
+}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  pointer-events: initial;
+  opacity: 1;
+}
+
+.logo {
+  margin-top: 7px;
+}
+
+/* ******************************** */
+
+/* **********mobile nav************ */
+
+/* ******************************** */
+
+/* Style the navigation menu */
+
+.topnav {
+  overflow: hidden;
+  background: linear-gradient(to right, #00c4cc, hsl(266, 78%, 64%));
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+
+.topnav a {
+  color: gold;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 1.5em;
+  display: block;
+}
+
+.smLogo {
+  height: 40px;
+}
+
+.shop-subcats {
+  padding: 0;
+  margin: 0 0 0 40px;
+}
+
+.shop-subcats a {
+  font-size: 1.25em;
+}
+
+.shop-subcats hr {
+  width: 80%;
+  margin: 0 auto;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(210, 223, 31, 0),
+    rgba(210, 223, 31, 0.75),
+    rgba(210, 223, 31, 0)
+  );
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  font-size: 1.5em;
+}
+
+.topnav a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 750px) {
+  .topnav {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  margin: 50px 0 0 0;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+#home {
+  margin: 100px 0;
+}
+
+.paypal {
+  box-shadow: none;
+}
+
+.shop-cta-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.shop-cta-btn:hover {
+  margin-top: 5px;
+  transform: scale(1.2);
+}
+
+.btn-scale {
+  transition: all 0.4s;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.btn-scale:hover {
+  transform: scale(1.2);
+}
+
+.btn {
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 0 3px #fff, 0 0 0 6px hsl(266, 78%, 64%),
+    -7px 7px 7px rgba(0, 0, 0, 0.75);
+  background: hsl(266, 78%, 64%);
+  color: gold;
+  transform: scale(1.2);
+}
+
+.cta-image {
+  width: 50%;
+}
+
+.rightHome {
+  text-align: center;
+  width: 50%;
+}
+
+.rightHome a {
+  text-decoration: none;
+  background: #00c4cc;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 50px;
+  border-radius: 8px;
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 1524px) {
+  .rightHome h1 {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .rightHome h1 {
+    font-size: 6em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .rightHome h1 {
+    font-size: 4.75em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  main {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .rightHome {
+    width: 100%;
+  }
+  .rightHome h1 {
+    font-size: 4em;
+  }
+  .cta-image {
+    margin-top: 50px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 336px) {
+  .rightHome h1 {
+    font-size: 3.35em;
+  }
+}
+
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.cta-desc {
+  background: #00c4cc;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+.cta-desc h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: gold;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.541);
+}
+
+.cta-desc p {
+  font-size: 1.25em;
+  letter-spacing: 0.125em;
+}
+
+.cta-desc p span {
+  color: #523a04;
+  letter-spacing: 0.01em;
+}
+
+.cta-desc a {
+  text-decoration: none;
+  color: gold;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.541);
+  transition: all 0.8s;
+}
+
+.cta-desc a:hover {
+  color: black;
+}
+
+section {
+  padding: 40px;
+  text-align: center;
+  color: hsl(266, 78%, 64%);
+  font-size: 1.5em;
+}
+
+section hr {
+  margin: 80px auto;
+}
+
+section h2 {
+  margin: 80px auto;
+}
+
+section p {
+  padding: 30px;
+  font-family: "Acme", sans-serif;
+}
+
+section a {
+  text-decoration: none;
+  font-family: "Acme", sans-serif;
+  color: #fff;
+  letter-spacing: 0.3em;
+  padding: 8px 50px;
+  background: #00c4cc;
+  border-radius: 10px;
+}
+
+.figs {
+  font-family: "Acme", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 30px 0 60px 0;
+}
+
+/* figure img {
+  box-shadow: 3px 3px 10px rgb(61, 152, 175);
+} */
+
+.fig-anchor {
+  background: none;
+}
+
+.promo-sm {
+  max-width: 20vw;
+  border: 3px solid turquoise;
+}
+
+.promo-lg {
+  max-width: 40vw;
+  border: 3px solid turquoise;
+}
+
+figure h3 {
+  margin: 15px 0 5px 0;
+}
+
+figure p {
+  padding-bottom: 20px;
+}
+
+figure a {
+  text-decoration: none;
+  color: #fff;
+  background: #00c4cc;
+  padding: 7px 20px;
+}
+
+figcaption {
+  font-size: 0.75em;
+}
+
+@media screen and (max-width: 750px) {
+  .cta-desc h2 {
+    font-size: 2.5em;
+  }
+  .cta-desc p {
+    font-size: 1.5em;
+    line-height: 1.75em;
+  }
+  section h2 {
+    font-size: 2.5em;
+  }
+  .figs {
+    flex-direction: column;
+  }
+  figure {
+    margin: 30px auto;
+  }
+  figcaption {
+    font-size: 1em;
+  }
+  .promo-lg,
+  .promo-sm {
+    max-width: 60vw;
+  }
+}
+
+.shop-cta {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin: 100px auto;
+  width: 80%;
+  padding: 80px;
+  background-image: linear-gradient(rgba(2, 67, 71, 0.5), rgba(9, 22, 92, 0.5)),
+    url("../images/shopping-annex.jpeg");
+  background-position: center;
+}
+
+@media screen and (max-width: 750px) {
+  .shop-cta {
+    width: 50%;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .shop-cta {
+    padding: 80px 50px;
+    margin: 100px auto 60px auto;
+  }
+  .shop-cta p {
+    padding: 30px 0;
+  }
+  .shop-cta a.btn {
+    font-size: 0.75em;
+    padding: 8px 22px;
+  }
+}
