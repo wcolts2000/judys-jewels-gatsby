@@ -228,10 +228,10 @@ const HeaderContainer = styled.header`
 
 // =============================================
 // ===============   Component  ================
-// =============================================
+// ========================================00=====
 class Header extends Component {
   constructor({ siteTitle }) {
-    super({ siteTitle })
+    super(siteTitle)
     this.state = {
       hidden: true,
     }
