@@ -11,6 +11,11 @@ import logo from "../images/logo.svg"
 const HeaderContainer = styled.header`
   padding: 0 0 16px 0;
   z-index: 90;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* bottom: ; */
 
   nav {
     font-size: 1.5em;
@@ -201,12 +206,13 @@ const HeaderContainer = styled.header`
     );
   }
 
-  .topnav a.icon {
+  .topnav .icon {
     display: block;
     position: absolute;
-    right: 0;
-    top: 8px;
+    right: 15px;
+    top: 15px;
     font-size: 1.5em;
+    color: gold;
   }
 
   .topnav a:hover {
@@ -293,9 +299,9 @@ class Header extends Component {
             <Link to="/about_us/">About Us</Link>
             <Link to="/contact/">Contact</Link>
           </div>
-          <Link className="icon" onClick={this.hamburgerMenuToggle}>
+          <p className="icon" onClick={this.hamburgerMenuToggle}>
             <i className="fa fa-bars"></i>
-          </Link>
+          </p>
         </div>
       </HeaderContainer>
     )
