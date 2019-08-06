@@ -44,9 +44,9 @@ const IndexPage = () => {
               Handcrafted Jewelry
             </h1>
             <div className="wow flipInY" data-wow-delay="1s">
-              <a href="shop.html" className="btn" id="btn-test">
+              <Link to="/shop/" className="btn" id="btn-test">
                 Enter Shop
-              </a>
+              </Link>
             </div>
           </div>
         </main>
@@ -58,7 +58,7 @@ const IndexPage = () => {
             on
             <span>NEW PRODUCTS</span> and
             <span>SALES</span> by visiting our
-            <a href="contact.html">Contact</a> page.
+            <Link to="/contact/">Contact</Link> page.
           </p>
         </div>
         <section>
@@ -76,9 +76,9 @@ const IndexPage = () => {
                 <h3>Dragonfly Necklace</h3>
                 <p>A Beautiful Beaded Chain with Dragonfly Pendant.</p>
                 <div className="shop-cta-btn">
-                  <a href="shop.html" className="btn">
+                  <Link to="/shop/" className="btn">
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </figcaption>
             </figure>
@@ -92,9 +92,9 @@ const IndexPage = () => {
                 <h3>Pink Teardrop</h3>
                 <p>A Pink Beaded Chain with a Teardrop Crystal Pendant.</p>
                 <div className="shop-cta-btn">
-                  <a href="shop.html" className="btn">
+                  <Link to="/shop/" className="btn">
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </figcaption>
             </figure>
@@ -108,9 +108,9 @@ const IndexPage = () => {
                 <h3>Lace Necklace and Earrings</h3>
                 <p>A Beaded Lace Necklace with Matching Earrings.</p>
                 <div className="shop-cta-btn">
-                  <a href="shop.html" className="btn">
+                  <Link to="/shop/" className="btn">
                     Buy Now
-                  </a>
+                  </Link>
                 </div>
               </figcaption>
             </figure>
@@ -119,9 +119,9 @@ const IndexPage = () => {
           <div className="shop-cta">
             <p>See All of Our Pieces in the</p>
             <div className="wow flip" data-wow-iteration="2">
-              <a href="shop.html" className="btn">
+              <Link to="/shop/" className="btn">
                 SHOP
-              </a>
+              </Link>
             </div>
           </div>
         </section>
