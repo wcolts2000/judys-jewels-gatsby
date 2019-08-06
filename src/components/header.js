@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
 import logo from "../images/logo.svg"
 
@@ -132,7 +132,13 @@ const HeaderContainer = styled.header`
   }
 
   .logo {
-    margin-top: 7px;
+    width: 150px;
+  }
+
+  .fas {
+    position: relative;
+    top: 4px;
+    left: 4px;
   }
 
   /* ******************************** */
@@ -153,6 +159,10 @@ const HeaderContainer = styled.header`
 
   .topnav #myLinks {
     display: none;
+  }
+
+  .topnav #myLinks.hidden {
+    display: block;
   }
 
   /* Style navigation menu links */
@@ -213,65 +223,84 @@ const HeaderContainer = styled.header`
 // =============================================
 // ===============   Component  ================
 // =============================================
+class Header extends Component {
+  constructor({ siteTitle }) {
+    super({ siteTitle })
+    this.state = {
+      hidden: true,
+    }
+  }
 
-const Header = ({ siteTitle }) => (
-  <HeaderContainer>
-    <nav className="navbar">
-      <Link to="/" className="active">
-        Home
-      </Link>
-      <div className="dropdown">
-        <button className="dropbtn">
-          Shop
-          <i className="fas fa-caret-down"></i>
-        </button>
-        <div className="dropdown-content">
-          <Link to="/shop/">Show Room</Link>
-          <Link to="/shop/necklaces/">Necklaces</Link>
-          <Link to="/shop/pendants/">Pendants</Link>
-          <Link to="/shop/bracelets/">Bracelets</Link>
-          <Link to="/shop/earrings/">Earrings</Link>
-          <Link to="/shop/rings/">Rings</Link>
-          <Link to="/shop/sets/">Sets</Link>
-          <Link to="/shop/metals/">Fine Metals</Link>
+  hamburgerMenuToggle = () => {
+    this.setState({ hidden: !this.state.hidden })
+    console.log("yeo")
+  }
+
+  render() {
+    return (
+      <HeaderContainer>
+        <nav className="navbar">
+          <Link to="/" className="active">
+            Home
+          </Link>
+          <div className="dropdown">
+            <button className="dropbtn">
+              Shop
+              <i className="fas fa-caret-down"></i>
+            </button>
+            <div className="dropdown-content">
+              <Link to="/shop/">Show Room</Link>
+              <Link to="/shop/necklaces/">Necklaces</Link>
+              <Link to="/shop/pendants/">Pendants</Link>
+              <Link to="/shop/bracelets/">Bracelets</Link>
+              <Link to="/shop/earrings/">Earrings</Link>
+              <Link to="/shop/rings/">Rings</Link>
+              <Link to="/shop/sets/">Sets</Link>
+              <Link to="/shop/metals/">Fine Metals</Link>
+            </div>
+          </div>
+          <img src={logo} alt="Mike and Judys Jewels Logo" className="logo" />
+          <Link to="/about_us/">About Us</Link>
+          <Link to="/contact/">Contact</Link>
+        </nav>
+        <div className="topnav">
+          <Link to="/" className="active">
+            <img
+              src={logo}
+              alt="mike and judys jewels logo"
+              className="smLogo"
+            />
+          </Link>
+          <div id="myLinks" className={this.state.hidden && "hidden"}>
+            <Link to="/">Home</Link>
+            <Link to="/shop/">Shop</Link>
+            <div className="shop-subcats">
+              <Link to="/shop/necklaces/">Necklaces</Link>
+              <hr />
+              <Link to="/shop/pendants/">Pendants</Link>
+              <hr />
+              <Link to="/shop/bracelets/">Bracelets</Link>
+              <hr />
+              <Link to="/shop/earrings/">Earrings</Link>
+              <hr />
+              <Link to="/shop/rings/">Rings</Link>
+              <hr />
+              <Link to="/shop/sets/">Sets</Link>
+              <hr />
+              <Link to="/shop/metals/">Fine Metals</Link>
+              <hr />
+            </div>
+            <Link to="/about_us/">About Us</Link>
+            <Link to="/contact/">Contact</Link>
+          </div>
+          <Link className="icon" onClick={this.hamburgerMenuToggle}>
+            <i className="fa fa-bars"></i>
+          </Link>
         </div>
-      </div>
-      <img src={logo} alt="Mike and Judys Jewels Logo" className="logo" />
-      <Link to="/about_us/">About Us</Link>
-      <Link to="/contact/">Contact</Link>
-    </nav>
-    <div className="topnav">
-      <Link to="/" className="active">
-        <img src={logo} alt="mike and judys jewels logo" className="smLogo" />
-      </Link>
-      <div id="myLinks">
-        <Link to="/">Home</Link>
-        <Link to="/shop/">Shop</Link>
-        <div className="shop-subcats">
-          <Link to="/shop/necklaces/">Necklaces</Link>
-          <hr />
-          <Link to="/shop/pendants/">Pendants</Link>
-          <hr />
-          <Link to="/shop/bracelets/">Bracelets</Link>
-          <hr />
-          <Link to="/shop/earrings/">Earrings</Link>
-          <hr />
-          <Link to="/shop/rings/">Rings</Link>
-          <hr />
-          <Link to="/shop/sets/">Sets</Link>
-          <hr />
-          <Link to="/shop/metals/">Fine Metals</Link>
-          <hr />
-        </div>
-        <Link to="/about_us/">About Us</Link>
-        <Link to="/contact/">Contact</Link>
-      </div>
-      <Link className="icon" onclick="hamburgerMenuToggle()">
-        <i className="fa fa-bars"></i>
-      </Link>
-    </div>
-  </HeaderContainer>
-)
+      </HeaderContainer>
+    )
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
