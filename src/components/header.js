@@ -230,8 +230,8 @@ const HeaderContainer = styled.header`
 // ===============   Component  ================
 // ========================================00=====
 class Header extends Component {
-  constructor({ siteTitle }) {
-    super(siteTitle)
+  constructor(props) {
+    super(props)
     this.state = {
       hidden: true,
     }
@@ -256,13 +256,13 @@ class Header extends Component {
             </button>
             <div className="dropdown-content">
               <Link to="/shop/">Show Room</Link>
-              <Link to="/shop/necklaces/">Necklaces</Link>
-              <Link to="/shop/pendants/">Pendants</Link>
-              <Link to="/shop/bracelets/">Bracelets</Link>
-              <Link to="/shop/earrings/">Earrings</Link>
-              <Link to="/shop/rings/">Rings</Link>
-              <Link to="/shop/sets/">Sets</Link>
-              <Link to="/shop/metals/">Fine Metals</Link>
+              <Link to="/shop/necklaces">Necklaces</Link>
+              <Link to="/shop/pendants">Pendants</Link>
+              <Link to="/shop/bracelets">Bracelets</Link>
+              <Link to="/shop/earrings">Earrings</Link>
+              <Link to="/shop/rings">Rings</Link>
+              <Link to="/shop/sets">Sets</Link>
+              <Link to="/shop/metals">Fine Metals</Link>
             </div>
           </div>
           <img src={logo} alt="Mike and Judys Jewels Logo" className="logo" />

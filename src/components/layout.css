@@ -151,6 +151,7 @@ html,
 body {
   height: 100%;
 }
+
 main > div {
   margin: 0 auto;
 }

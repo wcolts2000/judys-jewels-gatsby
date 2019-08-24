@@ -5,7 +5,7 @@ import Layout from "./../components/layout"
 function products() {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Products" />
       <div>products</div>
     </Layout>
   )

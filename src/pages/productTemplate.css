@@ -1,0 +1,105 @@
+.product-wrapper {
+  display: flex;
+  margin: 30px 30px 0 30px;
+  width: 100vw;
+  flex-flow: row;
+}
+
+@media screen and (max-width: 750px) {
+  .product-wrapper {
+    flex-flow: column;
+    align-items: center;
+  }
+  .product-desc {
+    margin: 50px 20px 0 20px;
+  }
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card h1 {
+  margin-bottom: 20px;
+  color: hsl(266, 78%, 64%);
+}
+
+.product-thumbs {
+  display: flex;
+  margin-top: 20px;
+}
+
+.primary {
+  width: 300px;
+  height: 300px;
+  background-color: #e4c47a;
+  border: 2px solid hsl(266, 78%, 64%);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease-in;
+}
+
+.primary:hover {
+  transform: scale(1.5);
+  transform-origin: bottom left;
+}
+
+@media screen and (max-width: 750px) {
+  .primary:hover {
+    transform: scale(1.2);
+    transform-origin: bottom;
+  }
+}
+
+.thumbnail-image {
+  margin-right: 10px;
+  width: 49px;
+  height: 48px;
+  background: #e4c47a;
+  border: 2px solid hsl(266, 78%, 64%);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.product-desc {
+  padding: 0 30px 30px 60px;
+}
+
+.product-desc h2 {
+  color: hsl(266, 78%, 64%);
+  margin: 0 0 25px 0;
+}
+
+.product-desc p {
+  margin-bottom: 25px;
+  font-size: 1.2em;
+}
+
+.suggested-items {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  margin: 20px 0 80px 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.suggested-items-sect h2 {
+  font-family: "Acme", sans-serif;
+  font-size: 0.75em;
+}
+
+.suggested-items img {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+}
+
+.suggested-items a {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}

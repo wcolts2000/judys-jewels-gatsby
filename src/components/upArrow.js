@@ -8,7 +8,7 @@ function UpArrow() {
       onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
       id="up-arrow"
     >
-      <i class="fas fa-arrow-circle-up" />
+      <i className="fas fa-arrow-circle-up" />
     </div>
   )
 }
